@@ -23,7 +23,5 @@ def world_computer():
     return render_template("service_frame.html", loaded_services=get_services())
 
 
-
-
 # maynard 11391
 # joshua 20999 (0x5207)

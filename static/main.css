@@ -19,6 +19,8 @@ code {
 .App-logo {
     height: 40vmin;
     pointer-events: none;
+    rotate: 180deg;
+
 }
 
 .App-header {
@@ -43,3 +45,4 @@ code {
 .small {
     font-size: 0.75rem;
 }
+

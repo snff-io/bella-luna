@@ -1,7 +1,16 @@
 <html>
-<body>
 
-    Hello, {{ name }}!
+<body>
+    <div class="App">
+    hi
+    {% for svc in loaded_services %}
+    <div class="service_card">
+        <h2>{{ svc.name }}</h2>
+        <p>{{ svc.description }}</p>
+        <a href="{{ svc.url }}">Go to {{ svc.name }}</a>
+    </div>
+    {% endfor %}
+</div>
 
 </body>
 
