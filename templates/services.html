@@ -1,0 +1,34 @@
+<head>
+    <title>{{ view.title }}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='../static/main.css') }}">
+
+<body>
+    <div >
+       <img class="loomingluna" src="{{ url_for('static', filename='bl-luna.png') }}" sizes="30px,30px,30px,30px,"  alt="logo" />
+            
+    </div>
+    <div class="App">
+
+        <img src="{{ url_for('static', filename='bl-services.png') }}" class="App-logo" alt="logo" />
+        <table>
+            {% for s in view.services %}
+            <tr>
+                <td>{{ s.name }}</td>
+            </tr>
+            <tr>
+                <td>{{ s.description }}</td>
+            </tr>
+            <tr>
+                <td>
+                    <code>
+                        <iframe src="metrics">
+                        </iframe>
+                    </code>
+                </td>
+            </tr>
+            {% endfor %}
+        </table class="small">
+    </div>
+</body>
+
+</html>
