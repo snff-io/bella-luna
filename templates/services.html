@@ -1,0 +1,32 @@
+<head>
+    <title>{{ title }}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+
+<body>
+    <div class="App">
+        <header class="App-header">
+            <img src="{{ url_for('static', filename='bl-services.png') }}" class="App-logo" alt="logo" />
+            <p>
+            <table>
+                {% for svc in service_cards %}
+                <tr>
+                    <td>{{ svc.name }}</td>
+                </tr>
+                <tr>
+                    <td>{{ svc.description }}</td>
+                </tr>
+                <tr>
+                    <td>
+                    <code>
+                        {{ get_metrics() }}
+                    </code>
+                    </td>
+                </tr>
+                {% endfor %}
+            </table class="small">
+            </p>
+        </header>
+    </div>
+</body>
+
+</html>
