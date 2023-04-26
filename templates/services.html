@@ -1,31 +1,33 @@
 <head>
-    <title>{{ title }}</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+    <title>{{ view.title }}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='../static/main.css') }}">
 
 <body>
+    <div >
+       <img class="loomingluna" src="{{ url_for('static', filename='bl-luna.png') }}" sizes="30px,30px,30px,30px,"  alt="logo" />
+            
+    </div>
     <div class="App">
-        <header class="App-header">
-            <img src="{{ url_for('static', filename='bl-services.png') }}" class="App-logo" alt="logo" />
-            <p>
-            <table>
-                {% for svc in service_cards %}
-                <tr>
-                    <td>{{ svc.name }}</td>
-                </tr>
-                <tr>
-                    <td>{{ svc.description }}</td>
-                </tr>
-                <tr>
-                    <td>
+
+        <img src="{{ url_for('static', filename='bl-services.png') }}" class="App-logo" alt="logo" />
+        <table>
+            {% for s in view.services %}
+            <tr>
+                <td>{{ s.name }}</td>
+            </tr>
+            <tr>
+                <td>{{ s.description }}</td>
+            </tr>
+            <tr>
+                <td>
                     <code>
-                        {{ get_metrics() }}
+                        <iframe src="metrics">
+                        </iframe>
                     </code>
-                    </td>
-                </tr>
-                {% endfor %}
-            </table class="small">
-            </p>
-        </header>
+                </td>
+            </tr>
+            {% endfor %}
+        </table class="small">
     </div>
 </body>
 

@@ -46,3 +46,9 @@ code {
     font-size: 0.75rem;
 }
 
+.loomingluna
+{
+    align-self: baseline;
+    align-content: baseline;
+    size: 10px;
+}
