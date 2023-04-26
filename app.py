@@ -8,4 +8,4 @@ app.register_blueprint(services.services, url_prefix='/services')
 @app.route("/")
 def index():
     '''default route'''
-    return redirect("/services")
+    return redirect("/services/")
